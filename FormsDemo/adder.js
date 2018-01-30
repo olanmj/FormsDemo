@@ -4,6 +4,15 @@
     document.querySelector("#sum").innerHTML = total;
 }
 
+var selectGender = function () {
+    var gender = document.querySelector("input[type=radio]:checked").value;
+}
+
 window.onload = function () {
     document.querySelector("#btn").onclick = add;
+    var radiobuttons = document.querySelectorAll("input[type=radio]");
+    for (var i = 0; i < radiobuttons.length; i++) {
+        radiobuttons[i].onchange = selectGender;
+    }
+    document.querySelector("#genderselect").onclick = selectGender;
 }

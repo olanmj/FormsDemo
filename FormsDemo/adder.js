@@ -6,6 +6,7 @@
 
 var selectGender = function () {
     var gender = document.querySelector("input[type=radio]:checked").value;
+    document.querySelector("#selected").innerHTML = "Current selection: <b>" + gender + "</b>";
 }
 
 window.onload = function () {

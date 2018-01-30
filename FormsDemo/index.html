@@ -4,21 +4,46 @@
     <meta charset="utf-8" />
     <title>Forms Demo</title>
     <script src="adder.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-    <h2>Simple Adder</h2>
-    <form>
-        <input type="number" id="op1" value="2" required /> +
-        <input type="number" id="op2" value="3" required />
-        <input type="button" id="btn" value=" = " />
-        <span id="sum"></span>
-    </form>
-
-    <form>
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other" checked> Other
-        <button type="button" id="genderselect">Submit</button>
-    </form>
+    <div class="container">
+        <div class="my-4">
+            <h2 class="pb-2">Example 1 - Simple Adder</h2>
+            <form>
+                <div class="form-row">
+                    <div class="col-1">
+                        <input type="number" id="op1" placeholder="value 1" required class="form-control" />
+                    </div>
+                    +
+                    <div class="col-1">
+                        <input type="number" id="op2" placeholder="value 2" required class="form-control" />
+                    </div>
+                    <div class="col-2">
+                        <input type="button" id="btn" value=" = " class="btn btn-sm btn-info" />
+                        <span id="sum" ></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="my-4">
+            <h2 class="pb-2">Example 2 - Gender Selector</h2>
+            <div class="pb-1">(Press Submit to see initial value)</div>
+            <form>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="gender" value="male"> Male
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="gender" value="female"> Female
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="gender" value="other" checked> Other
+                </div>
+                <button type="button" id="genderselect" class="btn btn-warning">Submit</button>
+            </form>
+            <div id="selected"></div>
+        </div>
+    </div>
 </body>
 </html>

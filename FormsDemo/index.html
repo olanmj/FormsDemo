@@ -48,13 +48,17 @@
         <div class="my-4">
             <h2 class="pb-2">Example 3 - Drop down list</h2>
             <form>
-                <select>
-                    <option value="0">Volvo</option>
-                    <option value="1">Saab</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Audi</option>
-                </select>
-                <button type="button" id="carselector">Submit</button>
+                <div class="form-row">
+                    <div class="col-2">
+                        <select class="form-control">
+                            <option value="0">Volvo</option>
+                            <option value="1">Saab</option>
+                            <option value="2">Mercedes</option>
+                            <option value="3">Audi</option>
+                        </select>
+                    </div>
+                    <button type="button" id="carselector" class="btn btn-info">Submit</button>
+                </div>
             </form>
             <div id="selectedcar"></div>
         </div>
